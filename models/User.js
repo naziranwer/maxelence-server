@@ -1,7 +1,7 @@
 const { DataTypes } = require('sequelize');
 const { sequelize } = require('../config/database'); // Assuming your Sequelize instance is exported from a file named database.js
 
-const User = sequelize.define('User', {
+const User = sequelize.define('user', {
   // Define attributes (columns) of the User model
   id: {
     type: DataTypes.INTEGER,

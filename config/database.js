@@ -2,14 +2,14 @@ const { Sequelize } = require('sequelize');
 require("dotenv").config();
 
 // Load environment variables
-const { DB_NAME, DB_USER, DB_PASSWORD } = process.env;
+const { DB_NAME, DB_USER, DB_PASSWORD,DB_HOST } = process.env;
 
 // Define database connection parameters
 const sequelize = new Sequelize({
   database: DB_NAME,
   username: DB_USER,
   password: DB_PASSWORD,
-  host: 'localhost',
+  host: DB_HOST,
   dialect: 'mysql',
   logging: false, // Disable logging SQL queries to console
 });

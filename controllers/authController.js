@@ -30,6 +30,7 @@ exports.signup = async (req, res) => {
   try {
     const { email, password, confirmPassword,role } = req.body;
      const photo=req.files;
+     console.log("prequest file",photo)
     if (!email || !password || !confirmPassword || !role) {
       return res.status(403).send({
         success: false,

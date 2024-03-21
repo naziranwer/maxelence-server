@@ -4,6 +4,7 @@ const app = express();
 const cors = require('cors');
 const { sequelize, testConnection } = require('./config/database');
 const authRoutes = require('./routes/authRoutes');
+const dataRoutes = require('./routes/dataRoutes');
 
 // Middleware
 app.use(express.json());
@@ -24,6 +25,7 @@ testConnection().then(() => {
   });
 
 app.use("/auth",authRoutes);
+app.use("/data",dataRoutes);
 
 app.get("/",(req,res)=>{
     res.send("hiiii you have entered my app");

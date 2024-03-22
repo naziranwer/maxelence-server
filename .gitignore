@@ -5,8 +5,8 @@ node_modules/
 .env
 
 
-auth.txt
-auth1.txt
+auth*.txt
+auth1*.txt
 image.txt
 # Logs
 logs/

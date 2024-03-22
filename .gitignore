@@ -4,6 +4,10 @@ node_modules/
 # Environment variables
 .env
 
+
+auth.txt
+auth1.txt
+image.txt
 # Logs
 logs/
 *.log

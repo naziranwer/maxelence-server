@@ -5,6 +5,8 @@ const multer = require('multer');
 const { storage } = require('../config/cloudinary');
 const upload = multer({ storage });
 
+
+
 // Route for user registration
 router.post("/signup",upload.single('avatar'), authController.signup);
 

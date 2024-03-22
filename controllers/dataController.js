@@ -2,8 +2,10 @@ const User = require("../models/User");
 
 // Function to fetch all users
 exports.getAllUsers = async (req, res) => {
+    console.log('data fetching request received')
   try {
     const users = await User.findAll();
+    console.log('user from backend',users);
     return res.status(200).json({
       success: true,
       data: users,

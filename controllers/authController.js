@@ -28,6 +28,7 @@ const mailSender = async (email, title, body) => {
 
 exports.signup = async (req, res) => {
   try {
+
     const { email, password, confirmPassword,role } = req.body;
      const photo=req.file;
      console.log("prequest file",photo)
@@ -52,7 +53,7 @@ exports.signup = async (req, res) => {
     // const existingUser = await User.query(existingUserQuery, [email]);
 
     const existingUser = await User.findOne({ where: { email: email } });
-    console.log("existing user", existingUser);
+    
 
     if (existingUser) {
       return res.status(400).json({
@@ -137,6 +138,7 @@ exports.login = async (req, res) => {
             id: user.id,
 
             email: user.email,
+            role: user.role
           },
           message: "User logged in successfully",
         });

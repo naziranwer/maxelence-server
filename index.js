@@ -5,6 +5,7 @@ const cors = require('cors');
 const { sequelize, testConnection } = require('./config/database');
 const authRoutes = require('./routes/authRoutes');
 const dataRoutes = require('./routes/dataRoutes');
+require("dotenv").config();
 
 // Middleware
 app.use(express.json());
